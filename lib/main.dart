@@ -8,24 +8,38 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'First App',
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: Scaffold(
+      title: 'BBANTO',
+      home: Grade(),
+    );
+  }
+}
+
+class Grade extends StatelessWidget {
+  const Grade({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.amber[800],
         appBar: AppBar(
-          title: Text('Hello!'),
+          title: Text('BBANTO'),
+          backgroundColor: Colors.amber[700],
+          centerTitle: true,
+          elevation: 0.0,
         ),
-        body: Center(
+        body: Padding(
+          padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
           child: Column(
             children: [
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello')
+              Text(
+                'Name',
+                style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                ),
+              ),
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
